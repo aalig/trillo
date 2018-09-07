@@ -58,12 +58,12 @@ body {
   flex: 0 0 18%; }
 
 .hotel-view {
-  background-color: var(--color-white);
+  background-color: orangered;
   flex: 1; }
 
 .logo {
   height: 3.25rem;
-  margin-left: 3rem; }
+  margin-left: 2rem; }
 
 .search {
   flex: 0 0 40%;
@@ -138,3 +138,14 @@ body {
     width: 3.75rem;
     border-radius: 50%;
     margin-right: 1rem; }
+
+.side-nav__icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%; }
+
+.legal {
+  font-size: 1.2rem;
+  columns: val(--color-grey-light-4);
+  text-align: center;
+  padding: 2.5rem; }
