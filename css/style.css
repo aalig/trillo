@@ -9,7 +9,9 @@
   --color-grey-light-4: #ccc;
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
-  --color-grey-dark-3: #999; }
+  --color-grey-dark-3: #999;
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  --border-line: 1px solid var(--color-grey-light-2); }
 
 * {
   margin: 0;
@@ -45,7 +47,7 @@ body {
   font-size: 1.4rem;
   height: 7rem;
   background-color: var(--color-white);
-  border-bottom: 1px solid var(--color-grey-light-2);
+  border-bottom: var(--border-line);
   display: flex;
   justify-content: space-between;
   align-items: center; }
@@ -61,8 +63,25 @@ body {
   justify-content: space-between; }
 
 .hotel-view {
-  flex: 1;
-  height: 80rem; }
+  flex: 1; }
+
+.detail {
+  font-size: 1.4rem;
+  display: flex;
+  background-color: var(--color-grey-light-1);
+  padding: 4.5rem;
+  border-bottom: var(--border-line); }
+
+.description {
+  flex: 0 0 60%;
+  box-shadow: var(--shadow-light);
+  background-color: var(--color-white);
+  padding: 3rem;
+  margin-right: 4.5rem; }
+
+.user-reviews {
+  background-color: var(--color-white);
+  flex: 1; }
 
 .logo {
   height: 3.25rem;
@@ -196,7 +215,8 @@ body {
 .overview {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--color-grey-light-2); }
+  background-color: var(--color-white);
+  border-bottom: var(--border-line); }
   .overview__heading {
     font-size: 2.25rem;
     font-weight: 300;
@@ -238,7 +258,7 @@ body {
   border: none;
   color: var(--color-primary);
   font-size: inherit;
-  border-bottom: 1px solid currentColor;
+  border-bottom: var(--border-line);
   padding-bottom: 0.2rem;
   background-color: transparent;
   cursor: pointer; }
@@ -246,3 +266,45 @@ body {
     color: var(--color-grey-dark-1); }
   .btn-inline:focus {
     outline: none; }
+
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem; }
+
+.list {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: var(--border-line);
+  border-bottom: var(--border-line);
+  display: flex;
+  flex-wrap: wrap; }
+  .list__item {
+    flex: 0 0 50%;
+    margin-bottom: 0.7rem; }
+  .list__item::before {
+    content: '';
+    color: var(--color-primary);
+    display: inline-block;
+    margin-right: 0.7rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    background-color: var(--color-primary);
+    -webkit-mask-image: url(../img/chevron-thin-right.svg);
+    -webkit-mask-size: cover;
+    mask-image: url(../img/chevron-thin-right.svg);
+    mask-size: cover; }
+
+.recommend {
+  font-size: 1.3rem;
+  color: var(--color-dark-3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .recommend__photo {
+    box-sizing: content-box;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 0.3rem solid var(--color-white);
+    border-radius: 50%; }
+    .recommend__photo:not(:last-child) {
+      margin-right: -1.5rem; }
