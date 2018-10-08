@@ -4,6 +4,12 @@
   background-color: var(--color-grey-light-1);
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   min-height: 50rem;
+
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0;
+    max-width: 100%; // becasue at this screen size we set global font size to be 8px and max width would become 120*8= 960px and not 1200px, so we want to use the entire width here
+    width: 100%;
+  }
 }
 
 .header {
@@ -18,6 +24,10 @@
 
 .content {
   display: flex;
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column; // putting the sidebar on top at this width
+  }
 }
 
 .sidebar {
@@ -39,6 +49,10 @@
   background-color: var(--color-grey-light-1);
   padding: 4.5rem;
   border-bottom: var(--border-line);
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem;
+  }
 }
 
 .description {
@@ -47,6 +61,11 @@
   background-color: var(--color-white);
   padding: 3rem;
   margin-right: 4.5rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
 }
 
 .user-reviews {
